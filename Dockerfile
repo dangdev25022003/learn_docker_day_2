@@ -7,4 +7,6 @@ RUN apt-get install -y python3
 
 COPY test.py ./test.py
 
-CMD [ "python3","test.py" ]
+RUN pip install flask
+
+CMD [ "python3","test.py", "./example02.py" ]
